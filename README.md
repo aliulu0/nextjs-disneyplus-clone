@@ -19,9 +19,8 @@ npm run dev or yarn dev
 ```
 ## Used Technologies and Libraries
 
-- React
+- Nextjs
 - firebase
-- nextjs
 - react-icons
 - TMBD Api
 - ContextAPI
