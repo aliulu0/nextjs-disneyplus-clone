@@ -1,0 +1,127 @@
+.container {
+  min-height: calc(100vh - 140px);
+  position: relative;
+  overflow: hidden;
+}
+.container::before{
+  background: url("../public/images/disneyplus-login.png") center center / cover no-repeat fixed;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.imageContainer{
+  overflow: hidden;
+  background: url("../public/images/disneyplus-login.png") center center / cover no-repeat fixed;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+}
+
+.contents {
+  position: absolute;
+  justify-content: flex-start;
+  top: 10%;
+  left: 90px;
+  z-index: 900px;
+  height: 100%;
+  color: var(--text-white-color);
+  overflow: hidden;
+}
+.logo {
+  width: 150px;
+  height: 100px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25rem;
+  width: 600px;
+}
+.description h1 {
+  font-size: 44px;
+}
+.description:last-child h3,
+.description h5 {
+  width: 500px;
+  color: #c0c0c0;
+}
+.formContent {
+  display: flex;
+}
+.formContent input {
+  padding: 15px 10px;
+  width: 650px;
+  background-color: #31343e;
+  color: #c0c0c0;
+  font-size: 18px;
+  border-radius: 10px 0 0 10px;
+}
+.formContent button {
+  width: 300px;
+  background-color: #0072d2;
+  font-size: 20px;
+  color: var(--text-white-color);
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+.formContent button:hover {
+  background-color: #197ccd;
+}
+@media (max-width: 650px) {
+  .container {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .imageContainer {
+    position: relative;
+    height: 450px;
+  }
+
+  .contents {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -5px;
+    height: 500px;
+    top: 0;
+    left: 0;
+    background-color: var(--background-black-color);
+    padding: 20px;
+  }
+  .headerLogo {
+    width: 100px;
+    height: 100px;
+  }
+  .description {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    width: 100%;
+  }
+  .description h1 {
+    font-size: 23px;
+  }
+  .description:last-child h3,
+  .description h5 {
+    width: 100%;
+    color: #c0c0c0;
+  }
+  .formContent button {
+    font-size: 12px;
+  }
+}

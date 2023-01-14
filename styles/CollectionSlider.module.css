@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0.5rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+.container h2 {
+  padding: 8px;
+  font-weight: 700;
+  color: var(--text-white-color);
+}
+.content {
+  padding: 8px;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+.wrap {
+  display: flex;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border: 3px solid hsl(0, 0%, 98%, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.44, 0.46, 0.96) 0s;
+  cursor: pointer;
+  margin: 10px 24px 8px 0;
+}
+.wrap:hover {
+  border: 3px solid hsl(0, 0%, 98%, 0.8);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.wrap Image {
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    min-width: 300px;
+    min-height: 210px;
+  }
+}
+@media screen and (max-width: 450px) {
+}

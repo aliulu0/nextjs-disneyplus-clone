@@ -1,0 +1,24 @@
+.carousel {
+  margin-top: 20px;
+  z-index: 2;
+}
+.carousel ul {
+  overflow: visible !important;
+  cursor: pointer;
+}
+.wrap {
+  border: 3px solid transparent;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 5px;
+  box-shadow: rgb(0 0 0 /0.7) 0 26px 30px -10px,
+    rgba(0, 0, 0, 0.73) 0 15px 10px -10px;
+  }
+  .wrap img {
+    width: auto;
+    height: 400px;
+    object-fit: fill;
+}
+.wrap:hover {
+  border: 2px solid rgb(250, 250, 250, 0.8);
+}

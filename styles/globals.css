@@ -1,0 +1,11 @@
+:root{
+  --text-white-color:#F9F9F9;
+  --background-black-color:#040714;
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}

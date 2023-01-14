@@ -1,0 +1,287 @@
+.container {
+  min-height: calc(100vh - 70px);
+  padding: 0 calc(3.5vw - 5px);
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.backgroundImg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.description {
+  margin-left: 50px;
+  position: absolute;
+  top: 7rem;
+  right: 1rem;
+  left: 1rem;
+  bottom: 7rem;
+  margin-top: 1.5rem;
+}
+.description h1 {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  overflow: hidden;
+  color: var(--text-white-color);
+}
+.description h6{
+  margin: 15px 0;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+  width: fit-content;
+  padding: 8px;
+  background-color: rgb(250, 250, 250, 0.8);
+  border: 2px solid var(--text-white-color);
+  color: var(--background-black-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 6px;
+
+}
+.controls {
+  display: flex;
+  margin-top: 30px;
+}
+.playBtn {
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 0 24px;
+  margin-right: 20px;
+  font-size: 15px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  height: 56px;
+  background-color: var(--text-white-color);
+  opacity: 0.8;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+.playBtn span {
+  margin-left: 5px;
+  font-size: 15px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+}
+.playBtn:hover {
+  background-color: var(--background-black-color);
+  color: var(--text-white-color);
+}
+.trailerBtn {
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 0 24px;
+  margin-right: 20px;
+  font-size: 15px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  height: 56px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: var(--text-white-color);
+  opacity: 0.8;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+.trailerBtn span {
+  margin-left: 5px;
+  font-size: 15px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+}
+.trailerBtn:hover {
+  background-color: var(--text-white-color);
+  color: var(--background-black-color);
+}
+.addbtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--text-white-color);
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0, 0.5);
+  overflow: hidden;
+  font-size: 30px;
+  padding: 5px 0 0;
+  color: var(--text-white-color);
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+.addbtn:hover,
+.groupBtn:hover {
+  background-color: var(--text-white-color);
+  color: #000;
+}
+
+.groupBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--text-white-color);
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0, 0.5);
+  overflow: hidden;
+  font-size: 30px;
+  color: var(--text-white-color);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+.info {
+  margin-top: 10px;
+  color: var(--text-white-color);
+  font-size: 20px;
+}
+
+.overview {
+  font-weight: 600;
+  margin-top: 30px;
+  font-size: 25px;
+  color: var(--text-white-color);
+  max-width: 750px;
+}
+
+.playerModalBackground {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgb(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+}
+.playerModal {
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  right: 7%;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+  opacity: 1;
+  z-index: 50;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.playerModalTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-black-color);
+    color: var(--text-white-color);
+    padding: 15px;
+}
+.playerModalTop span {
+    font-size: large;
+    font-weight: 500;
+}
+.playerModalTop div {
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.5;
+    cursor: pointer;
+} 
+.playerModalTop div span{
+    font-size: 25px;
+}
+.playerModalTop div:hover {
+    opacity: 0.8;
+}
+.showPlayerModalContent{
+    position: relative;
+    padding-top: 1000px;
+    padding-bottom: 0;
+}
+.modalPlayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+
+@media screen and (max-width: 650px) {
+  .description {
+    top: auto;
+    bottom: 2.5rem;
+    left: 2rem;
+    right: 3rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .description h1 {
+    text-align: center;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .description h6{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .playBtn,
+  .trailerBtn {
+    padding: 0 7px 0 10px;
+    margin-right: 10px;
+    width: 180px;
+    font-size: 12px;
+    height: 40px;
+  }
+  .playBtn span,
+  .trailerBtn span {
+    font-size: 12px;
+  }
+  .addbtn,
+  .groupBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .info {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .overview {
+    text-align: start;
+    margin: 30px auto 0 20px;
+    width: 100%;
+    font-size: 18px;
+  }
+  .playerModal {
+    left: 13%;
+    right: 13%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .description {
+    top: auto;
+  }
+  .description h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

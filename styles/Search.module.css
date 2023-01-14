@@ -1,0 +1,74 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:linear-gradient(to bottom, #41434E, #616574 );
+  color: var(--text-white-color);
+  height: 70px;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 36px;
+  font-size: 50px;
+  overflow: hidden;
+  border: none;
+}
+.searchBar::placeholder{
+  color: #ced6dd;
+}
+
+.container {
+  min-height: calc(100vh - 140px);
+  padding: 0 calc(3.5vw - 5px);
+  position: relative;
+}
+.container::before {
+  background: url("../public/images/home-background.png") center center / cover
+    no-repeat fixed;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.content {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.wrap {
+  display: flex;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border: 3px solid hsl(0, 0%, 98%, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.44, 0.46, 0.96) 0s;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.wrap:hover {
+  border: 3px solid hsl(0, 0%, 98%, 0.8);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 760px) {
+  .content {
+    padding: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 450px) {
+    .content {
+        padding: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+}
