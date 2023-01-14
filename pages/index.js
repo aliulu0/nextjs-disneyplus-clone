@@ -44,7 +44,7 @@ export default function Login() {
               {/* input -button */}
               <div className={styles.formContent}>
                 <input type="text" placeholder="Email" />
-                <button>CONTUINUE</button>
+                <button>CONTINUE</button>
               </div>
               <h3>
                 Get 12 months for the price of 10 when you sign up for an annual
